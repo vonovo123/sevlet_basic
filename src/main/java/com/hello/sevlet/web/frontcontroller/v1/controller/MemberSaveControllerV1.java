@@ -19,7 +19,6 @@ public class MemberSaveControllerV1 implements ControllerV1 {
         int age = Integer.parseInt(request.getParameter("age"));
         Member member = new Member(username,age);
         memberRepository.save(member);
-        System.out.println(member.toString());
         //Model에 데이터를 보관
         request.setAttribute("member",member);
         String viewPath = "/WEB-INF/views/save-result.jsp";
